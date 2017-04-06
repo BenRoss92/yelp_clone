@@ -1,7 +1,30 @@
 # Yelp Clone
 
+A mini clone of Yelp built in Ruby on Rails.
+
+## Instructions
+
+To run locally:
+
+1. Clone and open this repository - `$ git clone git@github.com:BenRoss92/yelp_clone.git && cd yelp_clone`
+2. Install gems - `$ bundle install`
+3. Create a [Facebook Developer application](http://developers.facebook.com/), making note of the two keys you're given
+4. Create a `facebook_secrets.yml` file in the root directory and add your API keys inside of this file like so:
+```
+FACEBOOK_CONFIG=YourAppIDGoesHere
+FACEBOOK_CONFIG=YourSecretGoesHere
+```
+5. Get your databases built:
+```
+bin/rake db:create
+bin/rake db:create RAILS_ENV=test
+```
+6. Start the server - `$ bin/rails server`
+7. View the app - open a browser window with URL `http://localhost:3000`
+
 ## User Stories
 
+```
 As a visitor,
 so that I can share my experience of a restaurant,
 I want to be able to create a new restaurant
@@ -37,25 +60,4 @@ I want to be able to see all reviews and ratings
 As a visitor,
 so that I can find consistently detailed reviews,
 I want to be able to see names and ratings for each restaurant (leaving a comment is optional)
-
-## How to get the app up and running
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
